@@ -39,7 +39,14 @@ function minifySVGTransform(svgo) {
 // Plugin function
 function minifySVGGulp(plugins) {
     var stream = new Transform({objectMode: true});
-    var svgo = new SVGOptim({ plugins: plugins });
+    // var svgConfig = {};                                  // TODO: Add arguments to function(plugins, pretty, full)
+    // if (plugins) { svgConfig.plugins = plugins; }        //       instead of hard coding below.
+    // if (pretty) { svgConfig.js2svg = { pretty: true } };
+    // if (full) { svgConfig.full = true; }
+    // var svgo = new SVGOptim(svgConfig);
+    var svgo = new SVGOptim({ full: true,
+                              plugins: plugins,
+                              js2svg: { pretty: true } });
 
     stream._transform = function(file, unused, done) {
         // When null just pass through
