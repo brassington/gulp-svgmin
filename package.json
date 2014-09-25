@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ben-eb/gulp-svgmin.git"
+    "url": "git://github.com/jabbrass/gulp-svgmin.git"
   },
   "keywords": [
     "gulpplugin",
     "svg"
   ],
   "dependencies": {
-    "svgo": "~0.4.5",
+    "svgo": "git://github.com/jabbrass/svgo.git",
     "bufferstreams": "0.0.2",
     "gulp-util": "~2.2.6"
   },
